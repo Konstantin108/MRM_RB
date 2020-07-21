@@ -23,7 +23,9 @@ const app = new Vue({
             {name: 'ОККО', price: 0.1, total: 0, col: 0, fixTotal: 0},
             {name: 'СберМаркет', price: 0.04, total: 0, col: 0, fixTotal: 0},
         ],
-        totalSum: 0
+        totalSum: 0,
+        show: false,
+        norma: ''
     },
     methods: {
         increaseCol(item) {
