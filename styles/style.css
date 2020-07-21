@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*.btn-block {*/
+/*    border-radius: 50%;*/
+/*    height: 60px;*/
+/*    width: 60px;*/
+/*    font-size: 58px;*/
+/*    outline: none;*/
+/*    text-align: center;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    color: grey;*/
+/*    border: 2px solid grey;*/
+/*}*/
+
+/*.btn-block:active {*/
+/*    border: 2px solid forestgreen;*/
+/*    color: black;*/
+/*    background-color: lightgoldenrodyellow;*/
+/*}*/
+
+.label {
+    background-color: forestgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.label-text {
+    color: white;
+    font-size: 30px;
+}
+
+.block-for-product {
+    width: 296px;
+    border: 2px solid green;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.block-for-stat {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin-bottom: 6px;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 4px solid darkgreen;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+}
+
+.block-for-title {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 6px;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    margin-bottom: 6px;
+}
+
+.block-for-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name {
+    font-size: 24px;
+}
+
+.price {
+    font-size: 20px;
+    color: darkgrey;
+}
+
+.num {
+    font-size: 100px;
+}

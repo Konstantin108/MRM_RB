@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/4bd251a57a.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <title>MRM RB</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div id="app">
+    <div class="label"><span class="label-text">Калькулятор</span></div>
+    <div class="block-for-stat">
+        <div class="circle"><span>1.70</span></div>
+        <div class="circle">{{fixedTotalSum}}</div>
+    </div>
+    <div class="titles">
+        <span>Норматив УП</span>
+        <span>Текущий УП</span>
+    </div>
+    <div v-for="product in products">
+        <div class="block-for-product">
+            <div class="block-for-title">
+                <div class="name">{{product.name}}</div>
+                <div class="price">{{product.price}}</div>
+            </div>
+            <div class="block-for-btn">
+                <button class="btn-block" @click="decreaseCol(product)">-</button>
+                <div class="num">{{product.col}}</div>
+                <button class="btn-block" @click="increaseCol(product)">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
