@@ -3,167 +3,364 @@ body {
     background-color: #dcedc8;
 }
 
-#app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 330px) {
+
+    #app {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    header {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 6px;
+        border-bottom: 1px solid #aed581;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    .clr-block {
+        height: 220px;
+        width: 100%;
+    }
+
+    .empty-plan {
+        color: red;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    .window {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        top: 186px;
+        background-color: white;
+        border: 4px solid green;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .fa-check-square {
+        color: forestgreen;
+        font-size: 35px;
+    }
+
+    input {
+        width: 80px;
+        height: 44px;
+        font-size: 30px;
+    }
+
+    input::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    button {
+        border-radius: 30px;
+        height: 50px;
+        width: 60px;
+        font-size: 54px;
+        outline: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: grey;
+        border: 2px solid grey;
+    }
+
+    button:active {
+        border: 2px solid forestgreen;
+        color: black;
+        background-color: lightgoldenrodyellow;
+    }
+
+    .active-circle:active {
+        border: 2px solid forestgreen;
+        color: black;
+        background-color: lightgoldenrodyellow;
+    }
+
+    .label {
+        background-color: forestgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    .label-text {
+        color: white;
+        font-size: 30px;
+    }
+
+    .block-for-product {
+        width: 150px;
+        height: 210px;
+        border: 2px solid green;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        padding-top: 4px;
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    .block-for-stat {
+        display: flex;
+        justify-content: space-between;
+        width: 260px;
+        margin-bottom: 6px;
+    }
+
+    .circle {
+        border-radius: 50%;
+        border: 4px solid darkgreen;
+        width: 110px;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 46px;
+        background-color: white;
+    }
+
+    .block-for-title {
+        display: flex;
+        padding-top: 10px;
+        padding-left: 20px;
+        width: 138px;
+        position: relative;
+    }
+
+    .titles {
+        display: flex;
+        justify-content: space-between;
+        width: 230px;
+        margin-bottom: 6px;
+    }
+
+    .block-for-btn {
+        display: flex;
+        justify-content: space-between;
+        width: 138px;
+    }
+
+    .price {
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        font-size: 20px;
+        color: darkgrey;
+    }
+
+    .name {
+        font-size: 22px;
+        align-self: flex-start;
+        width: 138px;
+        height: 50px;
+    }
+
+    .num {
+        font-size: 83px;
+    }
+
 }
 
-header {
-    width: 100%;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    margin-bottom: 6px;
-    border-bottom: 1px solid #aed581;
-    position: fixed;
-    top: 0;
-}
+@media (max-width: 328px) {
 
-.clr-block {
-    height: 220px;
-    width: 100%;
-}
+    #app {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.empty-plan{
-    color: red;
-    font-size: 20px;
-    padding-left: 20px;
-}
+    header {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 6px;
+        border-bottom: 1px solid #aed581;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
 
-.window {
-    height: 110px;
-    width: 166px;
-    position: fixed;
-    top: 186px;
-    background-color: white;
-    border: 4px solid green;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+    .clr-block {
+        height: 220px;
+        width: 100%;
+    }
 
-.fa-check-square {
-    color: forestgreen;
-    font-size: 35px;
-}
+    .empty-plan {
+        color: red;
+        font-size: 20px;
+        padding-left: 20px;
+    }
 
-input {
-    width: 80px;
-    height: 44px;
-    font-size: 30px;
-}
+    .window {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        top: 186px;
+        background-color: white;
+        border: 4px solid green;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
-input::-webkit-inner-spin-button {
-    display: none;
-}
+    .fa-check-square {
+        color: forestgreen;
+        font-size: 35px;
+    }
 
-button {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    font-size: 58px;
-    outline: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: grey;
-    border: 2px solid grey;
-}
+    input {
+        width: 80px;
+        height: 44px;
+        font-size: 30px;
+    }
 
-button:active {
-    border: 2px solid forestgreen;
-    color: black;
-    background-color: lightgoldenrodyellow;
-}
+    input::-webkit-inner-spin-button {
+        display: none;
+    }
 
-.active-circle:active {
-    border: 2px solid forestgreen;
-    color: black;
-    background-color: lightgoldenrodyellow;
-}
+    button {
+        border-radius: 30px;
+        height: 30px;
+        width: 50px;
+        font-size: 48px;
+        outline: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: grey;
+        border: 2px solid grey;
+    }
 
-.label {
-    background-color: forestgreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-    margin-bottom: 6px;
-}
+    button:active {
+        border: 2px solid forestgreen;
+        color: black;
+        background-color: lightgoldenrodyellow;
+    }
 
-.label-text {
-    color: white;
-    font-size: 30px;
-}
+    .active-circle:active {
+        border: 2px solid forestgreen;
+        color: black;
+        background-color: lightgoldenrodyellow;
+    }
 
-.block-for-product {
-    width: 296px;
-    border: 2px solid green;
-    border-radius: 8px;
-    margin-bottom: 4px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    background-color: white;
-}
+    .label {
+        background-color: forestgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        margin-bottom: 6px;
+    }
 
-.block-for-stat {
-    display: flex;
-    justify-content: space-between;
-    width: 260px;
-    margin-bottom: 6px;
-}
+    .label-text {
+        color: white;
+        font-size: 30px;
+    }
 
-.circle {
-    border-radius: 50%;
-    border: 4px solid darkgreen;
-    width: 110px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 46px;
-    background-color: white;
-}
+    .block-for-product {
+        width: 116px;
+        height: 200px;
+        border: 2px solid green;
+        border-radius: 8px;
+        margin-bottom: 6px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        padding-top: 4px;
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
 
-.block-for-title {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 18px;
-    margin-right: 18px;
-    margin-bottom: 6px;
-}
+    .block-for-stat {
+        display: flex;
+        justify-content: space-between;
+        width: 260px;
+        margin-bottom: 6px;
+    }
 
-.titles {
-    display: flex;
-    justify-content: space-between;
-    width: 230px;
-    margin-bottom: 6px;
-}
+    .circle {
+        border-radius: 50%;
+        border: 4px solid darkgreen;
+        width: 110px;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 46px;
+        background-color: white;
+    }
 
-.block-for-btn {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+    .block-for-title {
+        display: flex;
+        padding-top: 10px;
+        padding-left: 20px;
+        width: 110px;
+        position: relative;
+    }
 
-.name {
-    font-size: 24px;
-}
+    .titles {
+        display: flex;
+        justify-content: space-between;
+        width: 230px;
+        margin-bottom: 6px;
+    }
 
-.price {
-    font-size: 20px;
-    color: darkgrey;
-}
+    .block-for-btn {
+        display: flex;
+        justify-content: space-between;
+        width: 110px;
+    }
 
-.num {
-    font-size: 100px;
+    .price {
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        font-size: 16px;
+        color: darkgrey;
+    }
+
+    .name {
+        font-size: 20px;
+        align-self: flex-start;
+        width: 110px;
+        height: 50px;
+    }
+
+    .num {
+        font-size: 80px;
+    }
+
 }
