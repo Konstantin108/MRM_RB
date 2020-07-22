@@ -11,7 +11,7 @@
 <body>
 <div id="app">
     <header>
-        <div class="label"><span class="label-text">Калькулятор</span></div>
+        <div class="label"></div>
         <div class="block-for-stat">
             <div class="circle active-circle" @click="show=!show">
                 <span v-if="norma.length != 0">{{norma}}</span>
@@ -30,25 +30,27 @@
         </div>
     </header>
     <div class="clr-block"></div>
-    <div v-for="product in products">
-        <div class="block-for-product">
-            <div class="name">{{product.name}}</div>
-            <div class="product-content">
-                <div class="block-for-title">
-                    <div class="num">{{product.col}}</div>
-                    <div class="price">{{product.price}}</div>
-                </div>
-                <div class="block-for-btn">
-                    <button @click="decreaseCol(product)">-</button>
-                    <button @click="increaseCol(product)">+</button>
+    <div class="container">
+        <div v-for="product in products">
+            <div class="block-for-product">
+                <div class="name">{{product.name}}</div>
+                <div class="product-content">
+                    <div class="block-for-title">
+                        <div class="num">{{product.col}}</div>
+                        <div class="price">{{product.price}}</div>
+                    </div>
+                    <div class="block-for-btn">
+                        <button @click="decreaseCol(product)">-</button>
+                        <button @click="increaseCol(product)">+</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="signature">
         <div class="my-signature">
-            <span class="v-info"><i>Version 2.4</i></span>
-            <span class="dev-info">developed by Dryakhlov K.V.</span>
+            <span class="v-info"><i>Version 2.5</i></span>
+            <span class="dev-info">developed by Kpstya</span>
         </div>
     </div>
 </div>
