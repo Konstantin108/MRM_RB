@@ -10,46 +10,51 @@
 </head>
 <body>
 <div id="app">
-    <header>
-        <div class="label"></div>
-        <div class="block-for-stat">
-            <div class="circle active-circle" @click="show=!show">
-                <span v-if="norma.length != 0">{{norma}}</span>
-                <span class="empty-plan" v-else>Укажите план УП</span>
-            </div>
-            <div class="circle">{{fixedTotalSum}}</div>
-        </div>
-        <div class="titles">
-            <span>Норматив УП</span>
-            <span>Текущий УП</span>
-        </div>
-        <div class="window" v-if="show">
-            <input type="number" @click="norma=''" v-model.lazy="norma"
-                   onkeypress="this.value=this.value.substring(0,3);">
-            <i class="fas fa-check-square" @click="show=!show"></i>
-        </div>
-    </header>
-    <div class="clr-block"></div>
-    <div class="container">
-        <div v-for="product in products">
-            <div class="block-for-product">
-                <div class="name">{{product.name}}</div>
-                <div class="product-content">
-                    <div class="block-for-title">
-                        <div class="num">{{product.col}}</div>
-                        <div class="price">{{product.price}}</div>
+    <div class="top">
+        <header>
+            <div class="label"></div>
+            <div class="block-for-stat">
+                <div class="comp-block">
+                    <div class="circle active-circle" @click="show=!show">
+                        <span v-if="norma.length != 0">{{norma}}</span>
+                        <span class="empty-plan" v-else>Укажите план УП</span>
                     </div>
-                    <div class="block-for-btn">
-                        <button @click="decreaseCol(product)">-</button>
-                        <button @click="increaseCol(product)">+</button>
+                    <span>Норматив УП</span>
+                </div>
+                <div class="comp-block">
+                    <div class="circle">{{fixedTotalSum}}</div>
+                    <span>Текущий УП</span>
+                </div>
+            </div>
+            <div class="window" v-if="show">
+                <input type="number" @click="norma=''" v-model.lazy="norma"
+                       onkeypress="this.value=this.value.substring(0,3);">
+                <i class="fas fa-check-square" @click="show=!show"></i>
+            </div>
+        </header>
+        <div class="clr-block"></div>
+        <div class="container">
+            <div v-for="product in products">
+                <div class="block-for-product">
+                    <div class="name">{{product.name}}</div>
+                    <div class="product-content">
+                        <div class="block-for-title">
+                            <div class="num">{{product.col}}</div>
+                            <div class="price">{{product.price}}</div>
+                        </div>
+                        <div class="block-for-btn">
+                            <button @click="decreaseCol(product)"><span class="text-btn">-</span></button>
+                            <button @click="increaseCol(product)"><span class="text-btn">+</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="signature">
+        <div class="clr-signature"></div>
         <div class="my-signature">
-            <span class="v-info"><i>Version 2.5</i></span>
+            <span class="v-info"><i>Version 2.6</i></span>
             <span class="dev-info">developed by Kpstya</span>
         </div>
     </div>
