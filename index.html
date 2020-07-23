@@ -51,7 +51,7 @@
                        onkeypress="this.value=this.value.substring(0,3);">
                 <i class="fas fa-check-square" @click="show=!show"></i>
             </div>
-            <div class="window" v-if="showPrice">
+            <div class="window-price" v-if="showPrice">
                 <input type="number" @click="price=''" v-model.lazy="price"
                        onkeypress="this.value=this.value.substring(0,3);">
                 <i class="fas fa-check-square" @click="showPrice=!showPrice"></i>

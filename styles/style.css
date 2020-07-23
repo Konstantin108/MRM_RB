@@ -116,6 +116,22 @@ html {
         padding-bottom: 5px;
     }
 
+    .window-price{
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        top: 100px;
+        background-color: #FFFFE0;
+        border: 4px solid green;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
     .fa-check-square {
         color: forestgreen;
         font-size: 35px;
@@ -314,10 +330,16 @@ html {
         top: 6px;
     }
 
+    .bus-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .pos-for-rubel{
-        width: 100px;
         padding-bottom: 5px;
         height: 50px;
+        background-color: yellow;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -368,6 +390,10 @@ html {
         flex-direction: column;
     }
 
+    .bus-block{
+        width: 150px;
+    }
+
     .top {
         flex-grow: 1;
     }
@@ -408,6 +434,23 @@ html {
         color: red;
         font-size: 20px;
         padding-left: 20px;
+    }
+
+    .window-price{
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        top: 100px;
+        background-color: white;
+        border: 4px solid green;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        z-index: 3;
     }
 
     .window {
@@ -678,6 +721,23 @@ html {
         padding-bottom: 5px;
     }
 
+    .window-price {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        top: 10px;
+        left: 150px;
+        background-color: #FFFFE0;
+        border: 4px solid green;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
     .fa-check-square {
         color: forestgreen;
         font-size: 35px;
@@ -839,7 +899,7 @@ html {
     }
 
     .clr-signature{
-        width: 156px;
+        width: 200px;
     }
 
     .my-signature {
