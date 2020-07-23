@@ -24,8 +24,11 @@ const app = new Vue({
             {name: 'СберМаркет', price: 0.04, total: 0, col: 0, fixTotal: 0},
         ],
         totalSum: 0,
+        norma: '',
+        price: '',
         show: false,
-        norma: ''
+        showBusiness: false,
+        showPrice: false,
     },
     methods: {
         increaseCol(item) {
@@ -50,6 +53,12 @@ const app = new Vue({
         fixedTotalSum() {
             return this.totalSum.toFixed(2);
         },
+        income(){
+            return this.fixedTotalSum * this.price;
+        },
+        fixedIncome(){
+            return this.income.toFixed(1);
+        }
     },
     mounted() {
         console.log(this);
