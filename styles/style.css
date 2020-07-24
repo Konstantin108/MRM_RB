@@ -339,7 +339,6 @@ html {
     .pos-for-rubel{
         padding-bottom: 5px;
         height: 50px;
-        background-color: yellow;
         display: flex;
         align-items: flex-end;
         justify-content: center;
