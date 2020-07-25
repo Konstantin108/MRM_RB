@@ -62,24 +62,26 @@
             </div>
         </header>
         <div class="clr-block"></div>
-        <div class="container">
-            <div v-for="product in products">
-                <div class="block-for-product">
-                    <div class="name">{{product.name}}</div>
-                    <div class="product-content">
-                        <div class="block-for-title">
-                            <div class="num">{{product.col}}</div>
-                            <div class="price">{{product.price}}</div>
-                        </div>
-                        <div class="block-for-btn">
-                            <button @click="decreaseCol(product)"><span class="text-btn">-</span></button>
-                            <button @click="increaseCol(product)"><span class="text-btn">+</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="container">-->
+<!--            <div v-for="product in products">-->
+<!--                <div class="block-for-product">-->
+<!--                    <div class="name">{{product.name}}</div>-->
+<!--                    <div class="product-content">-->
+<!--                        <div class="block-for-title">-->
+<!--                            <div class="num">{{product.col}}</div>-->
+<!--                            <div class="price">{{product.price}}</div>-->
+<!--                        </div>-->
+<!--                        <div class="block-for-btn">-->
+<!--                            <button @click="decreaseCol(product)"><span class="text-btn">-</span></button>-->
+<!--                            <button @click="increaseCol(product)"><span class="text-btn">+</span></button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <products ref="products"></products>-->
+<!--        </div>-->
     </div>
+    <products ref="products"></products>
     <div class="signature">
         <div class="clr-signature"></div>
         <div class="my-signature">
@@ -90,6 +92,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="scripts/ProductsComp.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>
