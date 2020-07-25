@@ -1,4 +1,4 @@
-
+const API = 'https://raw.githubusercontent.com/Konstantin108/MRM_RB/create_fetchapi/responses';
 
 const app = new Vue({
     el: '#app',
