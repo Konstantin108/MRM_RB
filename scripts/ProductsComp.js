@@ -31,23 +31,30 @@ Vue.component('product', {
             methodsAPI: this.$root.$refs.methodsComp
         }
     },
+    mounted() {
+        console.log("VueComponent 'Product'");
+    },
     template: `
-         <div class="block-for-product">
-              <div class="name">{{product.name}}</div>
-                   <div class="product-content">
-                        <div class="block-for-title">
-                            <div class="num">{{product.col}}</div>
-                            <div class="price">{{product.price}}</div>
-                        </div>
-                        <div class="block-for-btn">
-                            <button @click="methodsAPI.decreaseCol(product)">
-                                <span class="text-btn">-</span>
-                            </button>
-                            <button @click="methodsAPI.increaseCol(product)">
-                                <span class="text-btn">+</span>
-                            </button>
-                   </div>
-              </div>
-         </div>
+        <transition 
+            appear
+            name="slide-in-fwd-bottom">
+             <div class="block-for-product">
+                  <div class="name">{{product.name}}</div>
+                       <div class="product-content">
+                            <div class="block-for-title">
+                                <div class="num">{{product.col}}</div>
+                                <div class="price">{{product.price}}</div>
+                            </div>
+                            <div class="block-for-btn">
+                                <button @click="methodsAPI.decreaseCol(product)">
+                                    <span class="text-btn">-</span>
+                                </button>
+                                <button @click="methodsAPI.increaseCol(product)">
+                                    <span class="text-btn">+</span>
+                                </button>
+                       </div>
+                  </div>
+             </div>
+        </transition>        
     `
 })

@@ -20,17 +20,17 @@ html {
         flex-grow: 1;
     }
 
-    .bus-icon{
+    .bus-icon {
         font-size: 28px;
         color: green;
     }
 
-    .business{
+    .business {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        top:84%;
+        top: 84%;
         right: 3%;
         width: 60px;
         z-index: 2;
@@ -40,7 +40,7 @@ html {
         background-color: #fff176;
     }
 
-    .business:active{
+    .business:active {
         background-color: white;
     }
 
@@ -81,7 +81,7 @@ html {
         font-size: 11px;
     }
 
-    .pos-for-rubel{
+    .pos-for-rubel {
         width: 100px;
         padding-bottom: 5px;
         height: 50px;
@@ -90,12 +90,12 @@ html {
         justify-content: center;
     }
 
-    .empty-price{
+    .empty-price {
         color: red;
         font-size: 22px;
     }
 
-    .rubel{
+    .rubel {
         color: black;
         font-size: 22px;
     }
@@ -116,7 +116,7 @@ html {
         padding-bottom: 5px;
     }
 
-    .window-price{
+    .window-price {
         height: 110px;
         width: 166px;
         position: fixed;
@@ -209,19 +209,19 @@ html {
         position: relative;
     }
 
-    .fa-pen{
+    .fa-pen {
         color: green;
         font-size: 19px;
     }
 
-    .bus-container{
+    .bus-container {
         width: 260px;
         display: flex;
         align-items: flex-end;
         justify-content: space-around;
     }
 
-    .block-for-business{
+    .block-for-business {
         position: fixed;
         display: flex;
         align-items: flex-end;
@@ -318,7 +318,7 @@ html {
         width: 260px;
     }
 
-    .block-for-business{
+    .block-for-business {
         position: fixed;
         display: flex;
         align-items: flex-end;
@@ -330,13 +330,13 @@ html {
         top: 6px;
     }
 
-    .bus-block{
+    .bus-block {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .pos-for-rubel{
+    .pos-for-rubel {
         padding-bottom: 5px;
         height: 50px;
         display: flex;
@@ -344,27 +344,27 @@ html {
         justify-content: center;
     }
 
-    .rubel{
+    .rubel {
         color: black;
         font-size: 26px;
     }
 
-    .empty-price{
+    .empty-price {
         color: red;
         font-size: 26px;
     }
 
-    .fa-pen{
+    .fa-pen {
         color: green;
         font-size: 22px;
     }
 
-    .business{
+    .business {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        top:88%;
+        top: 88%;
         right: 3%;
         width: 60px;
         z-index: 2;
@@ -374,11 +374,11 @@ html {
         background-color: #fff176;
     }
 
-    .business:active{
+    .business:active {
         background-color: white;
     }
 
-    .bus-icon{
+    .bus-icon {
         font-size: 28px;
         color: green;
     }
@@ -389,7 +389,7 @@ html {
         flex-direction: column;
     }
 
-    .bus-block{
+    .bus-block {
         width: 150px;
     }
 
@@ -435,7 +435,7 @@ html {
         padding-left: 20px;
     }
 
-    .window-price{
+    .window-price {
         height: 110px;
         width: 166px;
         position: fixed;
@@ -622,6 +622,46 @@ html {
         font-size: 11px;
     }
 
+    .fade-window-enter-active {
+        animation: fade-in .5s;
+    }
+
+    .fade-window-leave-active {
+        animation: fade-in-window .5s reverse;
+    }
+
+    @keyframes fade-in-window {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .fade-price-enter-active {
+        animation: fade-in-price .5s;
+    }
+
+    .fade-price-leave-active {
+        animation: fade-in-price .5s reverse;
+    }
+
+    @keyframes fade-in-price {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
 }
 
 @media (min-width: 600px) {
@@ -644,7 +684,7 @@ html {
     }
 
     header,
-    .block-for-business{
+    .block-for-business {
         padding-top: 8px;
         width: 146px;
         height: 100%;
@@ -657,7 +697,7 @@ html {
         align-items: flex-start;
     }
 
-    .bus-container{
+    .bus-container {
         display: flex;
         flex-direction: column-reverse;
         height: 200px;
@@ -665,7 +705,7 @@ html {
     }
 
     .comp-block,
-    .bus-block{
+    .bus-block {
         width: 146px;
         display: flex;
 
@@ -835,7 +875,7 @@ html {
         margin-top: 20px;
     }
 
-    .title-bus{
+    .title-bus {
         font-size: 16px;
     }
 
@@ -892,12 +932,12 @@ html {
         justify-content: center;
     }
 
-    .rubel{
+    .rubel {
         color: black;
         font-size: 24px;
     }
 
-    .clr-signature{
+    .clr-signature {
         width: 200px;
     }
 
@@ -916,4 +956,61 @@ html {
         font-size: 11px;
     }
 
+}
+
+/*--------------------animations--------------------*/
+
+.fade-window-enter-active {
+    animation: fade-in-window .5s;
+}
+
+.fade-window-leave-active {
+    animation: fade-in-window .5s reverse;
+}
+
+@keyframes fade-in-window {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-price-enter-active {
+    animation: fade-in-price .5s;
+}
+
+.fade-price-leave-active {
+    animation: fade-in-price .5s reverse;
+}
+
+@keyframes fade-in-price {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide-in-fwd-bottom-enter-active {
+    animation: slide-in-fwd-bottom .5s;
+}
+
+@keyframes slide-in-fwd-bottom {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
