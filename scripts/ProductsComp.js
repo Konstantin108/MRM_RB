@@ -12,6 +12,7 @@ Vue.component('products', {
                     this.products.push(el);
                 }
             });
+        console.log(this);
     },
     template: `
         <div class="container">
@@ -25,6 +26,11 @@ Vue.component('products', {
 
 Vue.component('product', {
     props: ['product'],
+    data(){
+        return{
+            methodsAPI: this.$root.$refs.methodsComp
+        }
+    },
     template: `
          <div class="block-for-product">
               <div class="name">{{product.name}}</div>
@@ -34,10 +40,10 @@ Vue.component('product', {
                             <div class="price">{{product.price}}</div>
                         </div>
                         <div class="block-for-btn">
-                            <button @click="$emit('decreaseCol', product)">
+                            <button @click="methodsAPI.decreaseCol(product)">
                                 <span class="text-btn">-</span>
                             </button>
-                            <button @click="$emit('increaseCol', product)">
+                            <button @click="methodsAPI.increaseCol(product)">
                                 <span class="text-btn">+</span>
                             </button>
                    </div>
