@@ -34,10 +34,10 @@ Vue.component('product', {
                             <div class="price">{{product.price}}</div>
                         </div>
                         <div class="block-for-btn">
-                            <button @click="decreaseCol(product)">
+                            <button @click="$emit('decreaseCol', product)">
                                 <span class="text-btn">-</span>
                             </button>
-                            <button @click="increaseCol(product)">
+                            <button @click="$emit('increaseCol', product)">
                                 <span class="text-btn">+</span>
                             </button>
                    </div>

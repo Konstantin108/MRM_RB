@@ -38,6 +38,7 @@ const app = new Vue({
             this.totalSum += item.price;
             item.col++;
             item.fixTotal = item.total.toFixed(2);
+            console.log(+1);
         },
         decreaseCol(item) {
             if (item.col > 0) {
@@ -45,6 +46,7 @@ const app = new Vue({
                 item.col--;
                 this.totalSum -= item.price;
                 item.fixTotal = item.total.toFixed(2);
+                console.log(-1);
             } else {
                 item.total = 0;
                 item.col = 0;
