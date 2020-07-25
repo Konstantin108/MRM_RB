@@ -15,12 +15,16 @@ Vue.component('products', {
         console.log(this);
     },
     template: `
-        <div class="container">
-            <product v-for="product of products"
-                     :key="product.id_product"
-                     :product="product">
-            </product>
-        </div>
+        <transition 
+            appear
+            name="slide-in-fwd-bottom">
+            <div class="container">
+                <product v-for="product of products"
+                         :key="product.id_product"
+                         :product="product">
+                </product>
+            </div>
+        </transition>     
     `
 });
 
@@ -35,9 +39,6 @@ Vue.component('product', {
         console.log("VueComponent 'Product'");
     },
     template: `
-        <transition 
-            appear
-            name="slide-in-fwd-bottom">
              <div class="block-for-product">
                   <div class="name">{{product.name}}</div>
                        <div class="product-content">
@@ -54,7 +55,6 @@ Vue.component('product', {
                                 </button>
                        </div>
                   </div>
-             </div>
-        </transition>        
+             </div>       
     `
 })
