@@ -2,7 +2,7 @@ Vue.component('products', {
     data() {
         return {
             catalogUrl: '/productsData.json',
-            products: []
+            products: [],
         }
     },
     mounted() {
@@ -29,9 +29,9 @@ Vue.component('products', {
 });
 
 Vue.component('product', {
-    props: ['product'],
-    data(){
-        return{
+    props: ['product', 'blackTheme'],
+    data() {
+        return {
             methodsAPI: this.$root.$refs.methodsComp
         }
     },
@@ -39,7 +39,7 @@ Vue.component('product', {
         console.log("VueComponent 'Product'");
     },
     template: `
-             <div class="block-for-product">
+             <div class="block-for-product" :class="{darkproduct: this.$parent.$root.blackTheme}">
                   <div class="name">{{product.name}}</div>
                        <div class="product-content">
                             <div class="block-for-title">
@@ -47,11 +47,17 @@ Vue.component('product', {
                                 <div class="price">{{product.price}}</div>
                             </div>
                             <div class="block-for-btn">
-                                <button @click="methodsAPI.decreaseCol(product)">
-                                    <span class="text-btn">-</span>
+                                <button
+                                    @click="methodsAPI.decreaseCol(product)"
+                                    :class="{btndark: this.$parent.$root.blackTheme}">
+                                    <span class="text-btn"
+                                        :class="{textbtndark: this.$parent.$root.blackTheme}">-</span>
                                 </button>
-                                <button @click="methodsAPI.increaseCol(product)">
-                                    <span class="text-btn">+</span>
+                                <button
+                                    @click="methodsAPI.increaseCol(product)"
+                                    :class="{btndark: this.$parent.$root.blackTheme}">
+                                    <span class="text-btn"
+                                        :class="{textbtndark: this.$parent.$root.blackTheme}">+</span>
                                 </button>
                        </div>
                   </div>

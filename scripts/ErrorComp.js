@@ -5,6 +5,7 @@ Vue.component('error', {
             textDefault: 'Нет связи с сервером'
         }
     },
+    props: ['blackTheme'],
     methods: {
         setError(error) {
             this.text = error;
@@ -18,11 +19,14 @@ Vue.component('error', {
     mounted() {
         console.log(this);
     },
-    template: `<div class="error-block" v-if="isVisible">
-                    <p class="error-msg">
-                        <button class="close-btn" @click="setError('')">x</button>
+    template: `<div v-if="isVisible"
+                    :class="{errorblack: this.$parent.$root.blackTheme, errorblock: !this.$parent.$root.blackTheme}">
+                    <p :class="{errmsgblack: this.$parent.$root.blackTheme, errormsg: !this.$parent.$root.blackTheme}">
+                        <button class="closebtn" @click="setError('')">x</button>
                         {{text}}
                     </p>
-                    <p class="error-msg">{{textDefault}}</p>
+                    <p :class="{errmsgblack: this.$parent.$root.blackTheme, errormsg: !this.$parent.$root.blackTheme}">
+                        {{textDefault}}
+                    </p>
                </div>`,
 });

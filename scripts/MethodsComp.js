@@ -11,7 +11,11 @@ Vue.component('methodsComp', {
             showPrice: false,
         }
     },
+    props: ['blackTheme'],
     methods: {
+        getStartDark() {
+           this.$parent.$root.getDark();
+        },
         increaseCol(product) {
             this.$parent.getJson(`${API + this.addUrl}`)
                 .then(data => {
@@ -64,30 +68,30 @@ Vue.component('methodsComp', {
         <transition
             appear
             name="header-in">
-            <header>
+            <header :class="{dark: this.$parent.$root.blackTheme}">
                 <div class="label"></div>
                 <div class="block-for-stat">
                     <div class="comp-block">
-                        <div class="circle active-circle" @click="show=!show">
+                        <div class="circle active-circle" @click="show=!show" :class="{darkproductcircle: this.$parent.$root.blackTheme}">
                             <span v-if="norma.length != 0">{{norma}}</span>
                             <span class="empty-plan" v-else>Укажите план УП</span>
                         </div>
-                        <span>Норматив УП</span>
+                        <span :class="{blackstattitle: this.$parent.$root.blackTheme}">Норматив УП</span>
                     </div>
                     <div class="comp-block">
-                        <div class="circle">{{fixedTotalSum}}</div>
-                        <span>Текущий УП</span>
+                        <div class="circle" :class="{darkproduct: this.$parent.$root.blackTheme}">{{fixedTotalSum}}</div>
+                        <span :class="{blackstattitle: this.$parent.$root.blackTheme}">Текущий УП</span>
                     </div>
                 </div>
-                <div class="block-for-business" v-if="showBusiness">
+                <div class="block-for-business" v-if="showBusiness" :class="{dark: this.$parent.$root.blackTheme}">
                     <div class="bus-container">
-                        <div class="bus-block">
+                        <div class="bus-block" :class="{darkbusblock: this.$parent.$root.blackTheme}">
                             <div class="pos-for-rubel">
                                 <div class="rubel">{{fixedIncome}} &#8381;</div>
                             </div>
-                            <span class="title-bus">Итого сегодня</span>
+                            <span class="title-bus" :class="{blackstattitle:  this.$parent.$root.blackTheme}">Итого сегодня</span>
                         </div>
-                        <div class="bus-block">
+                        <div class="bus-block-right" :class="{darkbusblock: this.$parent.$root.blackTheme}">
                             <div class="pos-for-rubel">
                                 <div class="bus-price" @click="showPrice=!showPrice">
                                     <span class="rubel" v-if="price.length != 0">{{price}} &#8381;</span>
@@ -95,32 +99,57 @@ Vue.component('methodsComp', {
                                     <i class="fas fa-pen"></i>
                                 </div>
                             </div>
-                            <span class="title-bus">Стоимость УП</span>
+                            <span class="title-bus title-bus-right" :class="{blackstattitle: this.$parent.$root.blackTheme}">Стоимость УП</span>
                         </div>
                     </div>
                 </div>
                 <transition name="fade-window">
-                    <div class="window" v-if="show">
-                        <input type="number" @click="norma=''" v-model.lazy="norma"
-                               onkeypress="this.value=this.value.substring(0,3);">
+                    <div class="window" v-if="show" :class="{windowdark: this.$parent.$root.blackTheme}">
+                        <input type="number"
+                               @click="norma=''"
+                               v-model.lazy="norma"
+                               onkeypress="this.value=this.value.substring(0,3);"
+                               :class="{darkinput: this.$parent.$root.blackTheme}">
                         <i class="fas fa-check-square" @click="show=!show"></i>
                     </div>
                 </transition>   
                 <transition name="fade-price"> 
-                    <div class="window-price" v-if="showPrice">
-                        <input type="number" @click="price=''" v-model.lazy="price"
-                               onkeypress="this.value=this.value.substring(0,3);">
+                    <div class="window-price" v-if="showPrice" :class="{windowdark: this.$parent.$root.blackTheme}">
+                        <input type="number"
+                               @click="price=''"
+                               v-model.lazy="price"
+                               onkeypress="this.value=this.value.substring(0,3);"
+                               :class="{darkinput: this.$parent.$root.blackTheme}">
                         <i class="fas fa-check-square" @click="showPrice=!showPrice"></i>
                     </div>
                 </transition>
                 <transition
                     appear
                     name="fade-btn">
-                    <div class="business" @click="showBusiness=!showBusiness">
-                        <i class="fas fa-ruble-sign bus-icon" v-if="showBusiness"></i>
-                        <i class="fas fa-calculator bus-icon" v-if="!showBusiness"></i>
+                    <div class="business"
+                        :class="{darkbtn: this.$parent.$root.blackTheme}"
+                        @click="showBusiness=!showBusiness">
+                        <i class="fas fa-ruble-sign bus-icon"
+                            v-if="showBusiness"
+                            :class="{darkfa: this.$parent.$root.blackTheme}"></i>
+                        <i class="fas fa-calculator bus-icon"
+                            v-if="!showBusiness"
+                            :class="{darkfa: this.$parent.$root.blackTheme}"></i>
                     </div>
-                </transition>    
+                </transition> 
+                <transition
+                    appear
+                    name="fade-btn-dark">
+                    <div class="black-btn"
+                        :class="{darkbtn: this.$parent.$root.blackTheme}"
+                        @click="getStartDark">
+                        <i class="far fa-moon bus-icon"
+                            v-if="this.$parent.$root.blackTheme"
+                            :class="{darkfa: this.$parent.$root.blackTheme}"></i>
+                        <i class="far fa-sun bus-icon"
+                            v-if="!this.$parent.$root.blackTheme"></i>
+                    </div>
+        </transition> 
             </header>
         </transition>    
     `

@@ -3,10 +3,10 @@ Vue.component('signatureComp', {
         <transition 
             appear
             name="slide-in-fw">
-            <div class="signature">
+            <div class="signature" :class="{blacksignature: this.$parent.$root.blackTheme}">
             <div class="clr-signature"></div>
-                <div class="my-signature">
-                    <span class="v-info"><i>Version 2.9.1</i></span>
+                <div class="my-signature" :class="{myblacksignature: this.$parent.$root.blackTheme}">
+                    <span class="v-info"><i>Version 2.9.3</i></span>
                     <span class="dev-info">developed by Kpstya</span>
                 </div>
             </div>

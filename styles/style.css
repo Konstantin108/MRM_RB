@@ -8,6 +8,10 @@ html {
     height: 100%;
 }
 
+.darkForBody {
+    background-color: black;
+}
+
 @media (max-width: 328px) {
 
     #app {
@@ -125,10 +129,13 @@ html {
     .pos-for-rubel {
         width: 100px;
         padding-bottom: 5px;
+        margin-right: 4px;
+        margin-left: 4px;
         height: 50px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        transition: .5s;
     }
 
     .empty-price {
@@ -182,6 +189,7 @@ html {
         width: 80px;
         height: 44px;
         font-size: 30px;
+        outline: none;
     }
 
     input::-webkit-inner-spin-button {
@@ -198,6 +206,7 @@ html {
         justify-content: center;
         align-items: center;
         border: 2px solid grey;
+        transition: .5s;
     }
 
     .text-btn {
@@ -240,6 +249,7 @@ html {
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
+        transition: .5s;
     }
 
     .block-for-stat {
@@ -271,7 +281,7 @@ html {
         z-index: 1;
         width: 100%;
         height: 83px;
-        top: 6px;
+        top: 3px;
     }
 
     .circle {
@@ -285,6 +295,7 @@ html {
         font-size: 30px;
         background-color: white;
         margin-bottom: 4px;
+        transition: .5s;
     }
 
     .titles {
@@ -364,6 +375,157 @@ html {
         }
     }
 
+    @keyframes fade-dark-in-btn {
+        0% {
+            transform: translateX(-15px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /*--------------------black theme styles--------------------*/
+    .blacksignature {
+        background-color: #1c313a;
+    }
+
+
+
+    .myblacksignature {
+        color: #718792;
+    }
+
+    .dark {
+        background-color: black;
+    }
+
+
+    .darkproductcircle {
+        background-color: #4f5b62;
+    }
+
+    .darkproductcircle:active {
+        background-color: #39796b;
+    }
+
+    .blackstattitle {
+        color: darkgrey;
+    }
+
+    .darkproduct {
+        background-color: #4f5b62;
+    }
+
+    .darkbusblock {
+        transition: .5s;
+        border: 1px solid #003300;
+        background-color: #4f5b62;
+        border-radius: 12px;
+    }
+
+    .black-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 84%;
+        left: 3%;
+        width: 36px;
+        z-index: 2;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid green;
+        background-color: #fff176;
+    }
+
+    .windowdark {
+        background-color: #4f5b62;
+    }
+
+    .darkinput {
+        background-color: darkgrey;
+        color: black;
+    }
+
+    .darkbtn {
+        background-color: #718792;
+        border: 1px solid #4c8c4a;
+    }
+
+    .darkfa {
+        color: black;
+    }
+
+    .errorblack {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 60px;
+        left: 20%;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1c313a;
+    }
+
+    .closebtn {
+        height: 30px;
+        outline: none;
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30px;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        font-size: 20px;
+        top: 3px;
+        right: 3px;
+        background-color: red;
+    }
+
+    .errormsgblack {
+        text-align: center;
+        color: black;
+    }
+
+    .errmsgblack {
+        text-align: center;
+        color: white;
+    }
+
+    .errorblock {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 60px;
+        left: 20%;
+        background-color: #ffff89;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btndark {
+        background-color: #718792;
+        border: 1px solid #4c8c4a;
+    }
+
+    .btndark:active {
+        background-color: #39796b;
+    }
+
+    .textbtndark {
+        color: black;
+    }
+
 }
 
 @media (min-width: 329px) {
@@ -382,14 +544,35 @@ html {
         background-color: white;
         z-index: 1;
         width: 100%;
-        height: 146px;
+        height: 150px;
         top: 6px;
     }
 
     .bus-block {
+        border-radius: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-right: 3px;
+        padding-left: 3px;
+        transition: .5s;
+    }
+
+    .title-bus-right {
+        position: absolute;
+        bottom: -1px;
+        left: 14px;
+    }
+
+    .bus-block-right {
+        display: flex;
+        border-radius: 12px;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        padding-right: 3px;
+        padding-left: 3px;
+        transition: .5s;
     }
 
     .pos-for-rubel {
@@ -398,9 +581,25 @@ html {
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        transition: .5s;
     }
 
-    .error-block {
+    .errorblack {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 60px;
+        left: 20%;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1c313a;
+    }
+
+    .errorblock {
         height: 110px;
         width: 166px;
         position: fixed;
@@ -415,7 +614,7 @@ html {
         align-items: center;
     }
 
-    .close-btn {
+    .closebtn {
         height: 30px;
         outline: none;
         border: 2px solid black;
@@ -427,18 +626,22 @@ html {
         font-size: 20px;
         top: 3px;
         right: 3px;
-        background-color: white;
-    }
-
-    .close-btn:active {
-        border: 2px solid black;
         background-color: red;
     }
 
-    .error-msg {
+    .closebtn:active {
+        border: 2px solid black;
+        background-color: indianred;
+    }
+
+    .errormsgblack {
         text-align: center;
         color: black;
-        font-size: 20px;
+    }
+
+    .errormsg {
+        text-align: center;
+        color: black;
     }
 
     .rubel {
@@ -455,6 +658,8 @@ html {
         color: green;
         font-size: 22px;
     }
+
+
 
     .business {
         display: flex;
@@ -488,6 +693,14 @@ html {
 
     .bus-block {
         width: 150px;
+        transition: .5s;
+        border-radius: 12px;
+    }
+
+    .bus-block-right {
+        width: 150px;
+        transition: .5s;
+        border-radius: 12px;
     }
 
     .top {
@@ -575,6 +788,7 @@ html {
         width: 80px;
         height: 44px;
         font-size: 30px;
+        outline: none;
     }
 
     input::-webkit-inner-spin-button {
@@ -588,6 +802,7 @@ html {
         outline: none;
         border: 2px solid grey;
         position: relative;
+        transition: .5s;
     }
 
     .text-btn {
@@ -635,6 +850,7 @@ html {
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
+        transition: .5s;
     }
 
     .block-for-stat {
@@ -655,6 +871,7 @@ html {
         font-size: 46px;
         background-color: white;
         margin-bottom: 4px;
+        transition: .5s;
     }
 
     .titles {
@@ -774,6 +991,108 @@ html {
         }
     }
 
+    .fade-btn-dark-enter-active {
+        animation: fade-dark-in-btn .5s;
+    }
+
+    @keyframes fade-dark-in-btn {
+        0% {
+            transform: translateX(-15px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /*--------------------black theme styles--------------------*/
+    .blacksignature {
+        background-color: #1c313a;
+    }
+
+    .myblacksignature {
+        color: #718792;
+    }
+
+    .dark {
+        background-color: black;
+    }
+
+    .black-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 88%;
+        left: 3%;
+        width: 36px;
+        z-index: 2;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid green;
+        background-color: #fff176;
+    }
+
+    .darkproductcircle {
+        background-color: #4f5b62;
+    }
+
+    .darkproductcircle:active {
+        background-color: #39796b;
+    }
+
+    .blackstattitle {
+        color: darkgrey;
+    }
+
+    .darkproduct {
+        background-color: #4f5b62;
+    }
+
+    .darkbusblock {
+        transition: .5s;
+        border: 1px solid #003300;
+        background-color: #4f5b62;
+        border-radius: 12px;
+    }
+
+    .windowdark {
+        background-color: #4f5b62;
+    }
+
+    .darkinput {
+        background-color: darkgrey;
+        color: black;
+    }
+
+    .darkbtn {
+        background-color: #718792;
+        border: 1px solid #4c8c4a;
+    }
+
+    .darkfa {
+        color: black;
+    }
+
+    .errmsgblack {
+        text-align: center;
+        color: white;
+    }
+
+    .btndark {
+        background-color: #718792;
+        border: 1px solid #4c8c4a;
+    }
+
+    .btndark:active {
+        background-color: #39796b;
+    }
+
+    .textbtndark {
+        color: black;
+    }
+
 }
 
 @media (min-width: 600px) {
@@ -789,7 +1108,7 @@ html {
     }
 
     .container {
-        padding-left: 146px;
+        padding-left: 149px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -798,7 +1117,7 @@ html {
     header,
     .block-for-business {
         padding-top: 8px;
-        width: 146px;
+        width: 148px;
         height: 100%;
         background-color: white;
         position: fixed;
@@ -820,7 +1139,7 @@ html {
     .bus-block {
         width: 146px;
         display: flex;
-
+        transition: .5s;
         flex-direction: column;
         align-items: center;
     }
@@ -842,7 +1161,7 @@ html {
         align-items: center;
         position: fixed;
         top: 5px;
-        right: 5px;
+        left: 97%;
         width: 36px;
         z-index: 2;
         height: 50px;
@@ -853,6 +1172,30 @@ html {
 
     .business:active {
         background-color: white;
+    }
+
+
+    .dark {
+        background-color: black;
+    }
+
+    .darkfa {
+        color: black;
+    }
+
+    .black-btn {
+        position: fixed;
+        left: 97%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 63px;
+        width: 36px;
+        z-index: 2;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid green;
+        background-color: #fff176;
     }
 
     .window {
@@ -872,7 +1215,7 @@ html {
         padding-bottom: 5px;
     }
 
-    .error-block {
+    .errorblock {
         height: 110px;
         width: 166px;
         position: fixed;
@@ -887,7 +1230,22 @@ html {
         align-items: center;
     }
 
-    .close-btn {
+    .errorblack {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 10px;
+        left: 150px;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1c313a;
+    }
+
+    .closebtn {
         height: 30px;
         outline: none;
         border: 2px solid black;
@@ -899,18 +1257,22 @@ html {
         font-size: 20px;
         top: 3px;
         right: 3px;
-        background-color: white;
-    }
-
-    .close-btn:active {
-        border: 2px solid black;
         background-color: red;
     }
 
-    .error-msg {
+    .closebtn:active {
+        border: 2px solid black;
+        background-color: indianred;
+    }
+
+    .errormsg {
         text-align: center;
         color: black;
-        font-size: 20px;
+    }
+
+    .errmsgblack {
+        text-align: center;
+        color: white;
     }
 
     .window-price {
@@ -939,10 +1301,16 @@ html {
         width: 80px;
         height: 44px;
         font-size: 30px;
+        outline: none;
     }
 
     input::-webkit-inner-spin-button {
         display: none;
+    }
+
+    .darkinput {
+        background-color: darkgrey;
+        color: black;
     }
 
     button {
@@ -952,6 +1320,16 @@ html {
         outline: none;
         border: 2px solid grey;
         position: relative;
+        transition: .5s;
+    }
+
+    .btndark {
+        background-color: #718792;
+        border: 1px solid #4c8c4a;
+    }
+
+    .btndark:active {
+        background-color: #39796b;
     }
 
     .text-btn {
@@ -962,6 +1340,10 @@ html {
         position: absolute;
         top: 9px;
         left: 9px;
+    }
+
+    .textbtndark {
+        color: black;
     }
 
     button:active {
@@ -990,11 +1372,28 @@ html {
         padding-left: 10px;
         padding-bottom: 10px;
         padding-top: 4px;
-        background-color: white;
         margin-right: 20px;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
+        transition: .5s;
+    }
+
+    .darkproduct {
+        background-color: #4f5b62;
+    }
+
+    .darkproductcircle {
+        background-color: #4f5b62;
+    }
+
+    .darkproductcircle:active {
+        background-color: #39796b;
+    }
+
+    .darkbtn {
+        background-color: #718792;
+        border: 1px solid #4c8c4a;
     }
 
     .block-for-stat {
@@ -1012,20 +1411,43 @@ html {
         justify-content: center;
         align-items: center;
         font-size: 46px;
-        background-color: white;
         margin-bottom: 4px;
+        transition: .5s;
+    }
+
+    .darkbusblock {
+        transition: .5s;
+        background-color: #4f5b62;
+        border-radius: 12px;
+    }
+
+    .windowdark {
+        background-color: #4f5b62;
     }
 
     .bus-block {
-        width: 134px;
+        transition: .5s;
+        width: 127px;
         height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 46px;
-        background-color: white;
         margin-bottom: 4px;
         margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    .bus-block-right {
+        width: 127px;
+        height: 60px;
+        transition: .5s;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        font-size: 46px;
+        border-radius: 12px;
     }
 
     .title-bus {
@@ -1076,8 +1498,21 @@ html {
 
     }
 
+    .myblacksignature {
+        color: #718792;
+    }
+
+    .blacksignature {
+        background-color: #1c313a;
+    }
+
+    .blackstattitle {
+        color: darkgrey;
+    }
+
     .pos-for-rubel {
-        width: 130px;
+        transition: .5s;
+        width: 127px;
         padding-bottom: 5px;
         height: 50px;
         display: flex;
@@ -1119,6 +1554,21 @@ html {
         }
         100% {
 
+        }
+    }
+
+    .fade-btn-dark-enter-active {
+        animation: fade-dark-in-btn .5s;
+    }
+
+    @keyframes fade-dark-in-btn {
+        0% {
+            transform: translateX(15px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
         }
     }
 
