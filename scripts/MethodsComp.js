@@ -14,7 +14,7 @@ Vue.component('methodsComp', {
     props: ['blackTheme'],
     methods: {
         getStartDark() {
-           this.$parent.$root.getDark();
+            this.$parent.$root.getDark();
         },
         increaseCol(product) {
             this.$parent.getJson(`${API + this.addUrl}`)
@@ -68,7 +68,7 @@ Vue.component('methodsComp', {
         <transition
             appear
             name="header-in">
-            <header :class="{dark: this.$parent.$root.blackTheme}">
+            <header :class="{headerdark: this.$parent.$root.blackTheme}">
                 <div class="label"></div>
                 <div class="block-for-stat">
                     <div class="comp-block">

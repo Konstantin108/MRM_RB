@@ -387,11 +387,15 @@ html {
     }
 
     /*--------------------black theme styles--------------------*/
+
     .blacksignature {
         background-color: #1c313a;
     }
 
-
+    .headerdark {
+        background-color: black;
+        border-bottom: 1px solid seagreen;
+    }
 
     .myblacksignature {
         color: #718792;
@@ -452,6 +456,10 @@ html {
     .darkbtn {
         background-color: #718792;
         border: 1px solid #4c8c4a;
+    }
+
+    .darkbtn:active{
+        background-color: #39796b;
     }
 
     .darkfa {
@@ -1024,6 +1032,11 @@ html {
         background-color: black;
     }
 
+    .headerdark {
+        background-color: black;
+        border-bottom: 1px solid seagreen;
+    }
+
     .black-btn {
         display: flex;
         justify-content: center;
@@ -1076,6 +1089,10 @@ html {
         border: 1px solid #4c8c4a;
     }
 
+    .darkbtn:active{
+        background-color: #39796b;
+    }
+
     .darkfa {
         color: black;
     }
@@ -1119,8 +1136,19 @@ html {
         justify-content: flex-start;
     }
 
-    header,
-    .block-for-business {
+    .block-for-business{
+        padding-top: 8px;
+        width: 148px;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    header{
         padding-top: 8px;
         width: 148px;
         height: 100%;
@@ -1401,6 +1429,10 @@ html {
         border: 1px solid #4c8c4a;
     }
 
+    .darkbtn:active{
+        background-color: #39796b;
+    }
+
     .block-for-stat {
         width: 130px;
         display: flex;
@@ -1453,6 +1485,11 @@ html {
         align-items: center;
         font-size: 46px;
         border-radius: 12px;
+    }
+
+    .headerdark {
+        background-color: black;
+        border-right: 3px solid seagreen;
     }
 
     .title-bus {
