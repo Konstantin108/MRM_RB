@@ -7,7 +7,7 @@ const app = new Vue({
             return fetch(url)
                 .then(result => result.json())
                 .catch(error => {
-                    alert('Нет связи с сервером');
+                    this.$refs.error.setError();
                 });
         }
     },

@@ -10,7 +10,7 @@ Vue.component('signatureComp', {
                     <span class="dev-info">developed by Kpstya</span>
                 </div>
             </div>
-        <transition>   
+        </transition>   
     `,
     mounted() {
         console.log(this);

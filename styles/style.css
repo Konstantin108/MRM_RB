@@ -50,6 +50,47 @@ html {
         justify-content: space-around;
     }
 
+    .error-block {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 60px;
+        left: 20%;
+        background-color: #ffff89;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close-btn {
+        height: 30px;
+        outline: none;
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30px;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        font-size: 20px;
+        top: 3px;
+        right: 3px;
+        background-color: white;
+    }
+
+    .close-btn:active {
+        border: 2px solid black;
+        background-color: red;
+    }
+
+    .error-msg {
+        text-align: center;
+        color: black;
+        font-size: 20px;
+    }
+
     header {
         width: 100%;
         height: 105px;
@@ -357,6 +398,47 @@ html {
         display: flex;
         align-items: flex-end;
         justify-content: center;
+    }
+
+    .error-block {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 60px;
+        left: 20%;
+        background-color: #ffff89;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close-btn {
+        height: 30px;
+        outline: none;
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30px;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        font-size: 20px;
+        top: 3px;
+        right: 3px;
+        background-color: white;
+    }
+
+    .close-btn:active {
+        border: 2px solid black;
+        background-color: red;
+    }
+
+    .error-msg {
+        text-align: center;
+        color: black;
+        font-size: 20px;
     }
 
     .rubel {
@@ -788,6 +870,47 @@ html {
         justify-content: space-around;
         padding-top: 5px;
         padding-bottom: 5px;
+    }
+
+    .error-block {
+        height: 110px;
+        width: 166px;
+        position: fixed;
+        position: relative;
+        top: 10px;
+        left: 150px;
+        background-color: #ffff89;
+        border: 4px solid red;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close-btn {
+        height: 30px;
+        outline: none;
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30px;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        font-size: 20px;
+        top: 3px;
+        right: 3px;
+        background-color: white;
+    }
+
+    .close-btn:active {
+        border: 2px solid black;
+        background-color: red;
+    }
+
+    .error-msg {
+        text-align: center;
+        color: black;
+        font-size: 20px;
     }
 
     .window-price {
