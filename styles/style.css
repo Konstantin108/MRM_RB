@@ -238,7 +238,7 @@ html {
 
     .block-for-product {
         width: 116px;
-        height: 200px;
+        height: 184px;
         border: 2px solid green;
         border-radius: 8px;
         margin-bottom: 6px;
@@ -373,6 +373,21 @@ html {
             transform: translateY(0);
             opacity: 1;
         }
+    }
+
+    @keyframes fade-dark-in-btn {
+        0% {
+            transform: translateX(-15px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-btn-dark-enter-active {
+        animation: fade-dark-in-btn .5s;
     }
 
     @keyframes fade-dark-in-btn {
