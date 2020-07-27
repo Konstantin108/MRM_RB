@@ -19,14 +19,17 @@ Vue.component('error', {
     mounted() {
         console.log(this);
     },
-    template: `<div v-if="isVisible"
-                    :class="{errorblack: this.$parent.$root.blackTheme, errorblock: !this.$parent.$root.blackTheme}">
-                    <p :class="{errmsgblack: this.$parent.$root.blackTheme, errormsg: !this.$parent.$root.blackTheme}">
-                        <button class="closebtn" @click="setError('')">x</button>
-                        {{text}}
-                    </p>
-                    <p :class="{errmsgblack: this.$parent.$root.blackTheme, errormsg: !this.$parent.$root.blackTheme}">
-                        {{textDefault}}
-                    </p>
-               </div>`,
+    template: `<transition name="fade-window">
+                   <div v-if="isVisible"
+                        :class="{errorblack: this.$parent.$root.blackTheme, errorblock: !this.$parent.$root.blackTheme}">
+                        <p :class="{errmsgblack: this.$parent.$root.blackTheme, errormsg: !this.$parent.$root.blackTheme}">
+                            <button class="closebtn" @click="setError('')">x</button>
+                            {{text}}
+                        </p>
+                        <p :class="{errmsgblack: this.$parent.$root.blackTheme, errormsg: !this.$parent.$root.blackTheme}">
+                            {{textDefault}}
+                        </p>
+                   </div>
+              </transition>     
+        `,
 });
