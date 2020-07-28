@@ -11,7 +11,6 @@ Vue.component('methodsComp', {
             showPrice: false,
         }
     },
-    props: ['blackTheme'],
     methods: {
         getStartDark() {
             this.$parent.$root.getDark();

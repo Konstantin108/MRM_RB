@@ -5,7 +5,6 @@ Vue.component('error', {
             textDefault: 'Нет связи с сервером'
         }
     },
-    props: ['blackTheme'],
     methods: {
         setError(error) {
             this.text = error;

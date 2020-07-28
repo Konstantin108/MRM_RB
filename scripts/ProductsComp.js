@@ -29,7 +29,7 @@ Vue.component('products', {
 });
 
 Vue.component('product', {
-    props: ['product', 'blackTheme'],
+    props: ['product'],
     data() {
         return {
             methodsAPI: this.$root.$refs.methodsComp
