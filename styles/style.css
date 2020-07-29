@@ -402,7 +402,6 @@ html {
     }
 
     /*--------------------black theme styles--------------------*/
-
     .blacksignature {
         background-color: #1c313a;
     }
@@ -473,7 +472,7 @@ html {
         border: 1px solid #4c8c4a;
     }
 
-    .darkbtn:active{
+    .darkbtn:active {
         background-color: #39796b;
     }
 
@@ -551,7 +550,7 @@ html {
         color: black;
     }
 
-    .title-bus{
+    .title-bus {
         text-align: center;
         margin-left: 5px;
     }
@@ -692,7 +691,6 @@ html {
         color: green;
         font-size: 22px;
     }
-
 
 
     .business {
@@ -1106,7 +1104,7 @@ html {
         border: 1px solid #4c8c4a;
     }
 
-    .darkbtn:active{
+    .darkbtn:active {
         background-color: #39796b;
     }
 
@@ -1156,7 +1154,7 @@ html {
         justify-content: flex-start;
     }
 
-    .block-for-business{
+    .block-for-business {
         padding-top: 8px;
         width: 148px;
         height: 100%;
@@ -1168,7 +1166,7 @@ html {
         align-items: flex-start;
     }
 
-    header{
+    header {
         padding-top: 8px;
         width: 148px;
         height: 100%;
@@ -1409,8 +1407,8 @@ html {
     }
 
     .label {
-        position: absolute;
-        left: -999px;
+        height: 0;
+        width: 0;
     }
 
     .block-for-product {
@@ -1446,7 +1444,7 @@ html {
         border: 1px solid #4c8c4a;
     }
 
-    .darkbtn:active{
+    .darkbtn:active {
         background-color: #39796b;
     }
 
