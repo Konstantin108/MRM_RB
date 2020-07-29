@@ -51,6 +51,7 @@ html {
     }
 
     .container {
+        padding-top: 107px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -116,11 +117,6 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .clr-block {
-        height: 105px;
-        width: 100%;
     }
 
     .empty-plan {
@@ -746,6 +742,7 @@ html {
     }
 
     .container {
+        padding-top: 168px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -770,11 +767,6 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .clr-block {
-        height: 164px;
-        width: 100%;
     }
 
     .empty-plan {
@@ -1157,6 +1149,7 @@ html {
     }
 
     .container {
+        padding-top: 0;
         padding-left: 149px;
         display: flex;
         flex-wrap: wrap;
@@ -1202,11 +1195,6 @@ html {
         transition: .5s;
         flex-direction: column;
         align-items: center;
-    }
-
-    .clr-block {
-        position: absolute;
-        left: -999px;
     }
 
     .empty-plan {
