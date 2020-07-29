@@ -35,9 +35,6 @@ Vue.component('product', {
             methodsAPI: this.$root.$refs.methodsComp
         }
     },
-    mounted() {
-        console.log("VueComponent 'Product'");
-    },
     template: `
              <div class="block-for-product" :class="{darkproduct: this.$parent.$root.blackTheme}">
                   <div class="name">{{product.name}}</div>
