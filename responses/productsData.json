@@ -1,0 +1,98 @@
+[
+  {
+    "id_product": 11,
+    "name": "Сбор данных",
+    "price": 0.13,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 12,
+    "name": "Сбор согласий",
+    "price": 0.11,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 13,
+    "name": "Вывод договора",
+    "price": 0.30,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 14,
+    "name": "Контакт с клиентом",
+    "price": 0.04,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 15,
+    "name": "Сбор документов",
+    "price": 0.24,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 16,
+    "name": "Заключение договра",
+    "price": 0.10,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 17,
+    "name": "Клиенты",
+    "price": 0.00,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 18,
+    "name": "Визит в суд",
+    "price": 0.12,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 19,
+    "name": "Вывод по цессии",
+    "price": 0.02,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 20,
+    "name": "Перевод пенсии",
+    "price": 0.25,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 21,
+    "name": "Отступное",
+    "price": 0.03,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  },
+  {
+    "id_product": 21,
+    "name": "Достижение соглашения",
+    "price": 0.03,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
+  }
+]
