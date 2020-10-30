@@ -86,5 +86,13 @@
     "total": 0,
     "col": 0,
     "fixTotal": 0
+  },
+  {
+    "id_product": 21,
+    "name": "Достижение соглашения",
+    "price": 0.03,
+    "total": 0,
+    "col": 0,
+    "fixTotal": 0
   }
 ]
