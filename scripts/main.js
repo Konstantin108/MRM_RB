@@ -1,4 +1,4 @@
-const API = 'https://raw.githubusercontent.com/Konstantin108/MRM_RB/new_branch_for_methods_create/responses';
+const API = '';
 
 const app = new Vue({
     el: '#app',
